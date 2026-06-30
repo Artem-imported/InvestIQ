@@ -1,26 +1,31 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { User } from "@supabase/supabase-js";
+import { createSlice } from "@reduxjs/toolkit";
 
 interface AuthState {
-    user: User | null;
+  isLogged: boolean;
+  email: string | null;
 }
 
 const initialState: AuthState = {
-    user: null,
+  isLogged: false,
+  email: null,
 };
 
 const authSlice = createSlice({
-    name: "auth",
-    initialState,
-    reducers: {
-        setUser: (
-            state,
-            action: PayloadAction<User | null>
-        ) => {
-            state.user = action.payload;
-        },
+  name: "auth",
+  initialState,
+  reducers: {
+    login(state, action) {
+      state.isLogged = true;
+      state.email = action.payload;
     },
+
+    logout(state) {
+      state.isLogged = false;
+      state.email = null;
+    },
+  },
 });
 
-export const { setUser } = authSlice.actions;
+export const { login, logout } = authSlice.actions;
+
 export default authSlice.reducer;

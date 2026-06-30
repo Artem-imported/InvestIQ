@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 56px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 12px 26px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 39px;
+    height: 31px;
+    margin-bottom: 6px;
+}
+
+.logo h2 {
+    margin-left: -18px;
+    font-family: Roboto;
+    font-weight: 900;
+    font-style: ExtraBold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    text-transform: uppercase;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 120px;
+    background: url("./images/back-login.png") top center no-repeat;
+    background-color: #F5F6FB;
+}
+
+.hero {
+    width: 385px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 102px;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+
+.hero p {
+    color: #52555F;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 18%;
+    text-transform: uppercase;
+}
+
+.card {
+    width: 436px;
+    background: white;
+    padding: 50px 86px;
+    border-radius: 30px;
+    box-shadow: 0 10px 60px #AAB2C533;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    color: #52555F;
+    margin-bottom: 20px;
+}
+
+.card-text2 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    color: black;
+    margin-bottom: 10px;
+
+}
+
+.google-div{
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    max-width: 122px;
+    background: #F6F7FB;
+    box-shadow: 1px 2px 3px 0px #AAB2C533;
+    border-radius: 26px;
+    transition: .2s;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    letter-spacing: 5%;
+    vertical-align: middle;
+}
+
+.google-img{
+    margin-right: 2px;
+}
+
+.google:hover {
+    background: #FF751D;
+    box-shadow: 1px 3px 5px 0px #FF6B0859;
+}
+
+.card input {
+    height: 52px;
+    padding: 0 16px;
+    border-radius: 12px;
+    border: 1px solid #d8d8d8;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.card input:focus {
+    border-color: orange;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.orange {
+    flex: 1;
+    height: 48px;
+    background: orange;
+    color: white;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.orange:hover {
+    background: #ff9800;
+}
+
+.gray {
+    flex: 1;
+    height: 48px;
+    background: #ececec;
+    border-radius: 12px;
+}
+
+.gray:hover {
+    background: #ddd;
+}
