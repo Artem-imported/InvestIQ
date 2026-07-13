@@ -1,3 +1,3 @@
 export default function Income() {
-    return <h1>Доходы</h1>;
+    return <h1>ДОХІД</h1>;
 }

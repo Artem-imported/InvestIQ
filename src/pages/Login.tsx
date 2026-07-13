@@ -3,7 +3,6 @@ import { signIn, signUp, signInGoogle } from "../api/auth";
 import { useNavigate } from "react-router-dom";
 import logo from "../images/logo.png";
 import google from "../images/google.png"
-import backB from "../images/back-login.png"
 import backM from "../images/back-login2.png"
 
 export default function Login() {
@@ -38,54 +37,59 @@ export default function Login() {
                     <h2>InvestIQ</h2>
                 </div>
             </header>
-            <div className="bg"></div>
+            
             <main>
-                <section className="hero">
-                    <h1>InvestIQ</h1>
-                    <p>SMART FINANCE</p>
-                </section>
+                <div className="bg"></div>
+                <div className="login-lc">
+                    <section className="hero">
+                        <h1>InvestIQ</h1>
+                        <p>SMART FINANCE</p>
+                        <img src={backM} alt="background" />
+                    </section>
 
-                <section className="card">
-                    <p className="card-text">Ви можете авторизуватися за допомогою акаунта Google</p>
-                    <div className="google-div">
-                        <button
-                            className="google-btn"
-                            onClick={() => signInGoogle()}
-                        >
-                            <img className="google-img" src={google}></img>
-                            oogle
-                        </button>
-                    </div>
-                    
-                    <p className="card-text">Або увійти за допомогою ел. пошти та паролю після реєстрації</p>
-                    <p className="card-text2">Електронна пошта:</p>
-                    <input
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <p className="card-text2">Пароль:</p>
-                    <input
-                        type="password"
-                        placeholder="Пароль"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <div className="buttons">
-                        <button
-                            className="orange"
-                            onClick={handleSubmit}
-                        >
-                            {register ? "Pеєстрація" : "Увійти"}
-                        </button>
-                        <button
-                            className="gray"
-                            onClick={() => setRegister(!register)}
-                        >
-                            {register ? "Увійти" : "Реєстрація"}
-                        </button>
-                    </div>
-                </section>
+                    <section className="card">
+                        <p className="card-text">Ви можете авторизуватися за допомогою акаунта Google</p>
+                        <div className="google-div">
+                            <button
+                                className="google-btn"
+                                onClick={() => signInGoogle()}
+                            >
+                                <img className="google-img" src={google}></img>
+                                oogle
+                            </button>
+                        </div>
+                        
+                        <p className="card-text">Або увійти за допомогою ел. пошти та паролю після реєстрації</p>
+                        <p className="card-text2">Електронна пошта:</p>
+                        <input
+                            placeholder="Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <p className="card-text2">Пароль:</p>
+                        <input
+                            type="password"
+                            placeholder="Пароль"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <div className="buttons">
+                            <button
+                                className="orange"
+                                onClick={handleSubmit}
+                            >
+                                {register ? "Pеєстрація" : "Увійти"}
+                            </button>
+                            <button
+                                className="gray"
+                                onClick={() => setRegister(!register)}
+                            >
+                                {register ? "Увійти" : "Реєстрація"}
+                            </button>
+                        </div>
+                    </section>
+                </div>
+                
             </main>
         </div>
     );
