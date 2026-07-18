@@ -46,9 +46,17 @@ export default function Layout() {
             <main className="main-content">
                 <div className="bg"></div>
                 <div className="bg2"></div>
-                <NavLink to="/expenses">ВИТРАТИ</NavLink>
-                <NavLink to="/income" end>ДОХІД</NavLink>
-                <Outlet />
+                <div className="exin">
+                    <div className="exin-btns">
+                        <NavLink className={({ isActive }) => isActive ? "exin-btn exin-btn-active" : "exin-btn"} to="/expenses">
+                            ВИТРАТИ
+                        </NavLink>
+                        <NavLink className={({ isActive }) => isActive ? "exin-btn exin-btn-active" : "exin-btn"} to="/income">
+                            ДОХІД
+                        </NavLink>
+                    </div>
+                    <Outlet />
+                </div>
             </main>
         </div>
     );

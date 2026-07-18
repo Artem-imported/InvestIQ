@@ -338,12 +338,13 @@ header {
   --finance-income: #2e9e5b;
 
   background: #ffffff;
-  border-radius: 28px;
+  border-radius: 0px 30px 30px 30px;
   box-shadow: 0 20px 60px rgba(20, 20, 40, 0.06);
   padding: 28px 32px 32px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: var(--finance-text);
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1060px;
   margin: 0 auto;
 }
 
@@ -422,14 +423,22 @@ header {
 }
 
 .finance-btn {
-  border: none;
-  border-radius: 16px;
-  padding: 13px 26px;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  transition: background-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+    border: none;
+    border-radius: 16px;
+    padding: 12px 34px;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+    height: 44px;
+    width: 100%;
+    max-width: 126px;
 }
 
 .finance-btn--primary {
@@ -474,11 +483,7 @@ header {
   align-items: start;
 }
 
-@media (max-width: 860px) {
-  .finance-body {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* ---------- Table ---------- */
 
@@ -620,23 +625,111 @@ header {
   font-weight: 500 !important;
 }
 
-/* ---------- Responsive ---------- */
 
-@media (max-width: 640px) {
-  .finance-card {
-    padding: 20px;
-    border-radius: 20px;
-  }
-
-  .finance-toolbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .finance-date-field,
-  .finance-amount-field,
-  .finance-input,
-  .finance-btn {
+.finance-date{
+    border: none;
+    background-color: white;
+    font-family: Roboto;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: var(--finance-text);
     width: 100%;
-  }
+    max-width: 100px;
+}
+
+.finance-details{
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    vertical-align: middle;
+    color: var(--finance-text);
+    width: 100%;
+    max-width: 275px;
+    height: 40px;
+    border: 2px solid var(--finance-border);
+    border-radius: 16px 0 0 0;
+    padding: 10px 19px;
+}
+
+.finance-select{
+    padding: 13px 19px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    vertical-align: middle;
+    color: #C7CCDC;
+    border: 2px solid var(--finance-border);
+    height: 40px;
+    margin-left: -2px;
+    width: 100%;
+    max-width: 188px;
+}
+
+.finance-money {
+    border: 2px solid var(--finance-border);
+    color: #C7CCDC;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    text-align: center;
+    vertical-align: middle;
+    height: 40px;
+    width: 100%;
+    max-width: 126px;
+    margin-left: -2px;
+    border-radius: 0 16px 16px 0;
+}
+
+.finance-toolbar-block{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 601px;
+}
+
+.exin-btns{
+    display: flex;
+    align-items: center;
+}
+
+.exin-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    max-width: 138px;
+    background-color: #FAFBFD;
+    font-family: Roboto;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border-radius: 16px 16px 0px 0px;
+}
+
+.exin-btn-active{
+    background-color: #FEFEFE;
+    color: #FF751D;
+}
+
+.exin{
+    margin-top: 9px;
+}
+.main-content{
+    display: flex;
+    justify-content: center;
 }
