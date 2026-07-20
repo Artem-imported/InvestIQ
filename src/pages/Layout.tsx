@@ -2,6 +2,8 @@ import { Outlet, NavLink } from "react-router-dom";
 import logo from "../images/logo.png";
 import { useEffect, useState } from "react";
 import { supabase } from "../supabase/supabase";
+import Balance from "../components/Balance";
+import revelicon from "../images/revelicon.png";
 
 export default function Layout() {
     const [userEmail, setUserEmail] = useState("");
@@ -14,7 +16,6 @@ export default function Layout() {
 
         getUser();
 
-        // Подписка на изменения авторизации (рекомендуется)
         const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
             setUserEmail(session?.user?.email || "");
         });
@@ -24,8 +25,7 @@ export default function Layout() {
 
     const handleLogout = async () => {
         await supabase.auth.signOut();
-        // После выхода Supabase автоматически редиректит или можно вручную:
-        window.location.href = '/login'; // или используй navigate из react-router
+        window.location.href = '/login'; 
     };
 
     return (
@@ -44,19 +44,32 @@ export default function Layout() {
             </header>
 
             <main className="main-content">
+                
                 <div className="bg"></div>
                 <div className="bg2"></div>
-                <div className="exin">
-                    <div className="exin-btns">
-                        <NavLink className={({ isActive }) => isActive ? "exin-btn exin-btn-active" : "exin-btn"} to="/expenses">
-                            ВИТРАТИ
-                        </NavLink>
-                        <NavLink className={({ isActive }) => isActive ? "exin-btn exin-btn-active" : "exin-btn"} to="/income">
-                            ДОХІД
-                        </NavLink>
+                <div className="content">
+                    <div className="main-top">
+                        <div className="main-top-balance">
+                            <Balance />
+                        </div>
+                        <div className="main-top-gotorevel">
+                            <p>Перейти до розрахунків</p>
+                            <img src={revelicon} alt="arrow" />
+                        </div>
                     </div>
-                    <Outlet />
+                    <div className="exin">
+                        <div className="exin-btns">
+                            <NavLink className={({ isActive }) => isActive ? "exin-btn exin-btn-active" : "exin-btn"} to="/expenses">
+                                ВИТРАТИ
+                            </NavLink>
+                            <NavLink className={({ isActive }) => isActive ? "exin-btn exin-btn-active" : "exin-btn"} to="/income">
+                                ДОХІД
+                            </NavLink>
+                        </div>
+                        <Outlet />
+                    </div>
                 </div>
+                
             </main>
         </div>
     );
