@@ -30,7 +30,7 @@ export default function Balance() {
  
     return (
         <div className="balance-mini">
-            <span className="balance-mini__label">Баланс:</span>
+            <span className="balance-mini__label">Баланс:</span>и 
             <span className={balance !== null && balance < 0 ? 'balance-mini__amount balance-mini__amount--negative' : 'balance-mini__amount'}>
                 {balance === null ? '…' : `${balance.toFixed(2)} грн.`}
             </span>

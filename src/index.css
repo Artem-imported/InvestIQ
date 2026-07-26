@@ -768,16 +768,33 @@ header {
 .balance-mini {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 15px;
+    gap: 20px;
 }
  
 .balance-mini__label {
-    opacity: 0.6;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 83px;
+    color: #52555FB2;
 }
- 
+
 .balance-mini__amount {
+    font-family: Roboto;
     font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2%;
+    text-align: right;
+    vertical-align: middle;
+    text-transform: uppercase;
+    width: 100%;
+    max-width: 100px;
     color: #1e8e3e;
 }
  
@@ -798,6 +815,7 @@ header {
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
+    margin-top: 40px;
 }
 .main-top-balance{
     grid-column: 2;
@@ -810,4 +828,11 @@ header {
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    text-align: right;
+    color: #52555FB2;
 }
