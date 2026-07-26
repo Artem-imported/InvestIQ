@@ -52,10 +52,10 @@ export default function Layout() {
                         <div className="main-top-balance">
                             <Balance />
                         </div>
-                        <div className="main-top-gotorevel">
+                        <NavLink to="/revel" className="main-top-gotorevel">
                             <p>Перейти до розрахунків</p>
                             <img src={revelicon} alt="arrow" />
-                        </div>
+                        </NavLink>
                     </div>
                     <div className="exin">
                         <div className="exin-btns">
