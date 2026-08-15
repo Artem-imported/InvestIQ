@@ -16,7 +16,7 @@ export default function Layout() {
 
         getUser();
 
-        const { data: listener } = supabase.auth.onAuthStateChange((event, session) => {
+        const { data: listener } = supabase.auth.onAuthStateChange((_event, session) => {
             setUserEmail(session?.user?.email || "");
         });
 
