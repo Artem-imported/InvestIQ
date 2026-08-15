@@ -17,14 +17,15 @@ export default function App() {
     return (
         <Routes>
             <Route path="/login" element={<Login />} />
-            <Route 
-                path="/" 
+            <Route
+                path="/"
                 element={
                     <ProtectedRoute>
                         <Layout />
                     </ProtectedRoute>
                 }
             >
+                <Route index element={<Navigate to="/income" replace />} />
                 <Route path="expenses" element={<Expenses />} />
                 <Route path="income" element={<Income />} />
             </Route>

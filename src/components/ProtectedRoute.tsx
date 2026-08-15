@@ -19,5 +19,5 @@ export default function ProtectedRoute({
 
     if (loading) return <h2>Loading...</h2>;
 
-    return logged ? children : <Navigate to="/" replace />;
+    return logged ? children : <Navigate to="/login" replace />;
 }
